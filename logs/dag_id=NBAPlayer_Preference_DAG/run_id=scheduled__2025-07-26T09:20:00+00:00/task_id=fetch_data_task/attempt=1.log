@@ -1,0 +1,50 @@
+[2025-07-27T23:06:08.380+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [queued]>
+[2025-07-27T23:06:08.386+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [queued]>
+[2025-07-27T23:06:08.386+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:08.386+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-07-27T23:06:08.386+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:08.395+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): fetch_data_task> on 2025-07-26 09:20:00+00:00
+[2025-07-27T23:06:08.408+0000] {standard_task_runner.py:52} INFO - Started process 198 to run task
+[2025-07-27T23:06:08.415+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'NBAPlayer_Preference_DAG', 'fetch_data_task', 'scheduled__2025-07-26T09:20:00+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/NBAPlayer_Preference_DAG.py', '--cfg-path', '/tmp/tmpg1_bsvaw', '--error-file', '/tmp/tmpm70_0wi5']
+[2025-07-27T23:06:08.419+0000] {standard_task_runner.py:80} INFO - Job 17: Subtask fetch_data_task
+[2025-07-27T23:06:08.470+0000] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-27T23:06:08.564+0000] {task_command.py:371} INFO - Running <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [running]> on host f8899ad4c8bd
+[2025-07-27T23:06:08.648+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=NBAPlayer_Preference_DAG
+AIRFLOW_CTX_TASK_ID=fetch_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-26T09:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-07-26T09:20:00+00:00
+[2025-07-27T23:06:09.929+0000] {logging_mixin.py:115} INFO - Data berhasil diambil dari PostgreSQL
+[2025-07-27T23:06:09.943+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-07-27T23:06:09.968+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=NBAPlayer_Preference_DAG, task_id=fetch_data_task, execution_date=20250726T092000, start_date=20250727T230608, end_date=20250727T230609
+[2025-07-27T23:06:10.038+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-07-27T23:06:10.119+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-27T23:15:02.556+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [queued]>
+[2025-07-27T23:15:02.564+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [queued]>
+[2025-07-27T23:15:02.564+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:15:02.564+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-07-27T23:15:02.564+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:15:02.578+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): fetch_data_task> on 2025-07-26 09:20:00+00:00
+[2025-07-27T23:15:02.597+0000] {standard_task_runner.py:52} INFO - Started process 333 to run task
+[2025-07-27T23:15:02.601+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'NBAPlayer_Preference_DAG', 'fetch_data_task', 'scheduled__2025-07-26T09:20:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/NBAPlayer_Preference_DAG.py', '--cfg-path', '/tmp/tmp0rpyw4bh', '--error-file', '/tmp/tmp0b2tb4d2']
+[2025-07-27T23:15:02.603+0000] {standard_task_runner.py:80} INFO - Job 25: Subtask fetch_data_task
+[2025-07-27T23:15:02.621+0000] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-07-27T23:15:02.681+0000] {task_command.py:371} INFO - Running <TaskInstance: NBAPlayer_Preference_DAG.fetch_data_task scheduled__2025-07-26T09:20:00+00:00 [running]> on host f8899ad4c8bd
+[2025-07-27T23:15:02.725+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=NBAPlayer_Preference_DAG
+AIRFLOW_CTX_TASK_ID=fetch_data_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-26T09:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-07-26T09:20:00+00:00
+[2025-07-27T23:15:03.997+0000] {logging_mixin.py:115} INFO - Data berhasil diambil dari PostgreSQL
+[2025-07-27T23:15:04.044+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-07-27T23:15:04.136+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=NBAPlayer_Preference_DAG, task_id=fetch_data_task, execution_date=20250726T092000, start_date=20250727T231502, end_date=20250727T231504
+[2025-07-27T23:15:04.181+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-07-27T23:15:04.239+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

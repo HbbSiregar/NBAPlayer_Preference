@@ -1,0 +1,107 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: m3
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+    networks:
+      - default
+
+  airflow-webserver:
+    image: apache/airflow:2.3.4
+    depends_on:
+      - postgres
+      - elasticsearch
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/m3
+      AIRFLOW__ELASTICSEARCH__HOST: http://elasticsearch:9200
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config/airflow.cfg:/opt/airflow/airflow.cfg:ro
+      - ./Data_Clean:/opt/airflow/Data_Clean     
+    ports:
+      - "8080:8080"
+    networks:
+      - default
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.3.4
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/m3
+      AIRFLOW__ELASTICSEARCH__HOST: http://elasticsearch:9200
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config/airflow.cfg:/opt/airflow/airflow.cfg:ro
+      - ./Data_Clean:/opt/airflow/Data_Clean     
+    networks:
+      - default
+    command: scheduler
+
+  airflow-init:
+    image: apache/airflow:2.3.4
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/m3
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config/airflow.cfg:/opt/airflow/airflow.cfg:ro
+    networks:
+      - default
+    command: >
+      bash -c "airflow db init && airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.0-arm64
+    container_name: elasticsearch
+    restart: always
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    cap_add:
+      - IPC_LOCK
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - default
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.0-arm64
+    container_name: kibana
+    restart: always
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+    networks:
+      - default
+
+volumes:
+  postgres_db:
+  elasticsearch-data:

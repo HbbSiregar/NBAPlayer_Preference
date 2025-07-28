@@ -1,0 +1,41 @@
+URL DATASET : https://www.kaggle.com/datasets/raunakpandey030/nba-player-stats/
+
+
+CREATE TABLE nba_player_data_raw (
+    "Rk" INTEGER ,
+    "Player" VARCHAR(50),
+    "Pos" VARCHAR(10),
+    "Age" INTEGER,
+    "Tm" VARCHAR(50),
+    "G" INTEGER,
+    "GS" INTEGER,
+    "MP" FLOAT,
+    "FG" FLOAT,
+    "FGA" FLOAT,
+    "FG%" FLOAT,
+    "3P" FLOAT,
+    "3PA" FLOAT,
+    "3P%" FLOAT,
+    "2P" FLOAT,
+    "2PA" FLOAT,
+    "2P%" FLOAT,
+    "eFG%" FLOAT,
+    "FT" FLOAT,
+    "FTA" FLOAT,
+    "FT%" FLOAT,
+    "ORB" FLOAT,
+    "DRB" FLOAT,
+    "TRB" FLOAT,
+    "AST" FLOAT,
+    "STL" FLOAT,
+    "BLK" FLOAT,
+    "TOV" FLOAT,
+    "PF" FLOAT,
+    "PTS" FLOAT,
+    "Year" VARCHAR(20)
+);
+
+--copy csv ke tabel nba_player_data_raw
+COPY table_m3 FROM '/tmp/NBAPlayer_Preference_data_raw.csv' WITH (FORMAT csv, HEADER true);
+
+

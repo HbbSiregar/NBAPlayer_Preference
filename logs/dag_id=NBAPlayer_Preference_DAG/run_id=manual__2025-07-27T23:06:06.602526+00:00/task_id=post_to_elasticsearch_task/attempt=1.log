@@ -1,0 +1,55 @@
+[2025-07-27T23:06:13.071+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.post_to_elasticsearch_task manual__2025-07-27T23:06:06.602526+00:00 [queued]>
+[2025-07-27T23:06:13.077+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.post_to_elasticsearch_task manual__2025-07-27T23:06:06.602526+00:00 [queued]>
+[2025-07-27T23:06:13.077+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:13.078+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-07-27T23:06:13.078+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:13.084+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): post_to_elasticsearch_task> on 2025-07-27 23:06:06.602526+00:00
+[2025-07-27T23:06:13.087+0000] {standard_task_runner.py:52} INFO - Started process 210 to run task
+[2025-07-27T23:06:13.089+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'NBAPlayer_Preference_DAG', 'post_to_elasticsearch_task', 'manual__2025-07-27T23:06:06.602526+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/NBAPlayer_Preference_DAG.py', '--cfg-path', '/tmp/tmp43gpmc10', '--error-file', '/tmp/tmpobix6if4']
+[2025-07-27T23:06:13.090+0000] {standard_task_runner.py:80} INFO - Job 21: Subtask post_to_elasticsearch_task
+[2025-07-27T23:06:13.125+0000] {task_command.py:371} INFO - Running <TaskInstance: NBAPlayer_Preference_DAG.post_to_elasticsearch_task manual__2025-07-27T23:06:06.602526+00:00 [running]> on host f8899ad4c8bd
+[2025-07-27T23:06:13.169+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=NBAPlayer_Preference_DAG
+AIRFLOW_CTX_TASK_ID=post_to_elasticsearch_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-27T23:06:06.602526+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-27T23:06:06.602526+00:00
+[2025-07-27T23:06:13.224+0000] {base.py:271} INFO - HEAD http://elasticsearch:9200/ [status:200 request:0.036s]
+[2025-07-27T23:06:14.688+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.386s]
+[2025-07-27T23:06:14.791+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.092s]
+[2025-07-27T23:06:14.944+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.143s]
+[2025-07-27T23:06:15.059+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.104s]
+[2025-07-27T23:06:15.153+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.085s]
+[2025-07-27T23:06:15.229+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.064s]
+[2025-07-27T23:06:15.303+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.063s]
+[2025-07-27T23:06:15.363+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.050s]
+[2025-07-27T23:06:15.812+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.439s]
+[2025-07-27T23:06:15.927+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.100s]
+[2025-07-27T23:06:16.014+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.076s]
+[2025-07-27T23:06:16.083+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.060s]
+[2025-07-27T23:06:16.427+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.079s]
+[2025-07-27T23:06:16.475+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.038s]
+[2025-07-27T23:06:16.542+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.056s]
+[2025-07-27T23:06:16.609+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.052s]
+[2025-07-27T23:06:16.674+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.054s]
+[2025-07-27T23:06:16.732+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.048s]
+[2025-07-27T23:06:16.988+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.246s]
+[2025-07-27T23:06:17.050+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.050s]
+[2025-07-27T23:06:17.096+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.036s]
+[2025-07-27T23:06:17.142+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.036s]
+[2025-07-27T23:06:17.193+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.040s]
+[2025-07-27T23:06:17.280+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.076s]
+[2025-07-27T23:06:17.339+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.042s]
+[2025-07-27T23:06:17.406+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.056s]
+[2025-07-27T23:06:17.484+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.059s]
+[2025-07-27T23:06:17.532+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.039s]
+[2025-07-27T23:06:17.575+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.033s]
+[2025-07-27T23:06:17.590+0000] {base.py:271} INFO - POST http://elasticsearch:9200/_bulk [status:200 request:0.008s]
+[2025-07-27T23:06:17.590+0000] {logging_mixin.py:115} INFO - 14573 data berhasil dimasukkan ke Elasticsearch
+[2025-07-27T23:06:17.615+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-07-27T23:06:17.656+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=NBAPlayer_Preference_DAG, task_id=post_to_elasticsearch_task, execution_date=20250727T230606, start_date=20250727T230613, end_date=20250727T230617
+[2025-07-27T23:06:17.705+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-07-27T23:06:17.740+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

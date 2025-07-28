@@ -1,0 +1,29 @@
+[2025-07-27T23:06:11.048+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.data_preprocessing_task manual__2025-07-27T23:06:06.602526+00:00 [queued]>
+[2025-07-27T23:06:11.053+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: NBAPlayer_Preference_DAG.data_preprocessing_task manual__2025-07-27T23:06:06.602526+00:00 [queued]>
+[2025-07-27T23:06:11.053+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:11.053+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-07-27T23:06:11.053+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-07-27T23:06:11.061+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): data_preprocessing_task> on 2025-07-27 23:06:06.602526+00:00
+[2025-07-27T23:06:11.076+0000] {standard_task_runner.py:52} INFO - Started process 204 to run task
+[2025-07-27T23:06:11.083+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'NBAPlayer_Preference_DAG', 'data_preprocessing_task', 'manual__2025-07-27T23:06:06.602526+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/NBAPlayer_Preference_DAG.py', '--cfg-path', '/tmp/tmps0o_4ewz', '--error-file', '/tmp/tmpuuzzx5n0']
+[2025-07-27T23:06:11.085+0000] {standard_task_runner.py:80} INFO - Job 18: Subtask data_preprocessing_task
+[2025-07-27T23:06:11.128+0000] {task_command.py:371} INFO - Running <TaskInstance: NBAPlayer_Preference_DAG.data_preprocessing_task manual__2025-07-27T23:06:06.602526+00:00 [running]> on host f8899ad4c8bd
+[2025-07-27T23:06:11.180+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=NBAPlayer_Preference_DAG
+AIRFLOW_CTX_TASK_ID=data_preprocessing_task
+AIRFLOW_CTX_EXECUTION_DATE=2025-07-27T23:06:06.602526+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-07-27T23:06:06.602526+00:00
+[2025-07-27T23:06:11.570+0000] {logging_mixin.py:115} INFO - Jumlah data setelah hapus duplikat: 14573
+[2025-07-27T23:06:11.575+0000] {logging_mixin.py:115} INFO - Jumlah nilai hilang sebelum diisi: 3277
+[2025-07-27T23:06:11.580+0000] {logging_mixin.py:115} INFO - Jumlah nilai hilang setelah diisi: 0
+[2025-07-27T23:06:11.828+0000] {logging_mixin.py:115} INFO - Kolom main_pose berhasil dibuat dengan posisi utama dari kolom pos
+[2025-07-27T23:06:11.832+0000] {logging_mixin.py:115} INFO - Kolom ID unik berhasil dibuat dari gabungan player, team, dan year
+[2025-07-27T23:06:11.958+0000] {logging_mixin.py:115} INFO - Data yang sudah dibersihkan berhasil disimpan ke /opt/***/Data_Clean/NBAPlayer_Preference_data_clean.csv
+[2025-07-27T23:06:11.982+0000] {python.py:173} INFO - Done. Returned value was: None
+[2025-07-27T23:06:11.992+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=NBAPlayer_Preference_DAG, task_id=data_preprocessing_task, execution_date=20250727T230606, start_date=20250727T230611, end_date=20250727T230611
+[2025-07-27T23:06:12.049+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-07-27T23:06:12.093+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
