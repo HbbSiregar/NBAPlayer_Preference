@@ -14,8 +14,6 @@
   &nbsp;&nbsp;&nbsp;&nbsp;└─ Great Expectations project: checkpoints, expectations, dll  
 - `images/`  
   &nbsp;&nbsp;&nbsp;&nbsp;└─ Screenshot visualisasi Kibana + `spurs.png`  
-- `logs/`  
-  &nbsp;&nbsp;&nbsp;&nbsp;└─ Log dari eksekusi Airflow  
 - `config/airflow.cfg`  
 - `docker-compose.yaml` — Konfigurasi Docker  
 - `Dockerfile.airflow` — Dockerfile khusus Airflow  
