@@ -94,7 +94,7 @@ data_docs_sites:
       class_name: DefaultSiteIndexBuilder
 
 anonymous_usage_statistics:
-  data_context_id: 3264442b-0b69-4bb5-a145-0c4f72b13ebd
+  data_context_id: 75012625-0e67-42af-83c3-648a1f616d64
   enabled: true
 fluent_datasources:
   nba_player_csv:

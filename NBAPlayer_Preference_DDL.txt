@@ -35,7 +35,7 @@ CREATE TABLE nba_player_data_raw (
     "Year" VARCHAR(20)
 );
 
---copy csv ke tabel nba_player_data_raw
+--copy csv file to tabel nba_player_data_raw
 COPY table_m3 FROM '/tmp/NBAPlayer_Preference_data_raw.csv' WITH (FORMAT csv, HEADER true);
 
 

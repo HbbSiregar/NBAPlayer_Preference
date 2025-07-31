@@ -3,4 +3,3 @@ USER root
 RUN pip install --no-cache-dir psycopg2-binary
 USER airflow
 COPY ./config/airflow.cfg /opt/airflow/airflow.cfg
-

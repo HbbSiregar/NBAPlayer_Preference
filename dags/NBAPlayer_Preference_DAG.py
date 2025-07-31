@@ -1,9 +1,9 @@
 '''
 =================================================
-Nama  : Ma'ruf Habibie Siregar
+Name  : Ma'ruf Habibie Siregar
 
-Program ini dibuat untuk melakukan automatisasi load data, tranform, dan push dari PostgreSQL ke ElasticSearch. 
-Adapun dataset yang dipakai adalah dataset statistic pemain NBA sampai season 2021/2022
+This program is created to automate loading, transforming, and pushing data from PostgreSQL to Elasticsearch.  
+The dataset used is NBA player statistics up to the 2021/2022 season.
 =================================================
 '''
 from airflow import DAG
@@ -22,9 +22,9 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-# Fungsi ambil data
+# Data fetching function
 def fetch_data(**kwargs):
-    '''Fungsi ini berguna untuk mengambil data dari PostgreSQL dengan user : airflow'''
+    '''This function fetches data from PostgreSQL with user: airflow'''
     conn = psycopg2.connect(
         host='postgres', 
         port=5432,
@@ -36,24 +36,24 @@ def fetch_data(**kwargs):
     df = pd.read_sql(query, conn)
     conn.close()
     kwargs['ti'].xcom_push(key='raw_data', value=df.to_json())
-    print("Data berhasil diambil dari PostgreSQL")
+    print("Data successfully fetched from PostgreSQL")
 
-# Fungsi preprocessing data (cleaning + save to csv)
+# Data preprocessing function (cleaning + save to csv)
 def data_preprocessing_all(**kwargs): 
-    '''Fungsi ini berguna untuk melakukan pembersihan data, normalisasi, serta menyimpan hasil ke CSV'''
+    '''This function cleans, normalizes data, and saves the result to CSV'''
     ti = kwargs['ti']
     json_str = ti.xcom_pull(key='raw_data', task_ids='fetch_data_task')
     df = pd.read_json(json_str)
 
     # Data cleaning
     df = df.drop_duplicates()
-    print(f'Jumlah data setelah hapus duplikat: {len(df)}')
+    print(f'Number of records after removing duplicates: {len(df)}')
 
     df.columns = [c.strip().lower().replace(' ', '_') for c in df.columns]
 
-    print(f'Jumlah nilai hilang sebelum diisi: {df.isna().sum().sum()}')
+    print(f'Number of missing values before filling: {df.isna().sum().sum()}')
     df = df.fillna(0)
-    print(f'Jumlah nilai hilang setelah diisi: {df.isna().sum().sum()}')
+    print(f'Number of missing values after filling: {df.isna().sum().sum()}')
 
     if 'year' in df.columns:
         df['year_start'] = df['year'].str.split('-').str[0].astype(int)
@@ -61,29 +61,29 @@ def data_preprocessing_all(**kwargs):
 
     if 'pos' in df.columns:
         df['main_pose'] = df['pos'].str.split('-').str[0]
-        print("Kolom main_pose berhasil dibuat dengan posisi utama dari kolom pos")
+        print("The 'main_pose' column was successfully created with the main position from the 'pos' column")
 
     df['ID'] = df['player'] + "_" + df['tm'] + "_" + df['year']
-    print("Kolom ID unik berhasil dibuat dari gabungan player, team, dan year")
+    print("Unique ID column successfully created by combining player, team, and year")
 
-    # Save to CSV simultan dalam fungsi ini
+    # Save to CSV within this function
     output_dir = "/opt/airflow/Data_Clean"
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, "NBAPlayer_Preference_data_clean.csv")
     df.to_csv(output_path, index=False)
-    print(f"Data yang sudah dibersihkan berhasil disimpan ke {output_path}")
+    print(f"Cleaned data successfully saved to {output_path}")
 
     ti.xcom_push(key='cleaned_data_path', value=output_path)
 
-# Fungsi push ke Elasticsearch
+# Push data to Elasticsearch function
 def post_to_elasticsearch(**kwargs):
-    '''Fungsi ini berguna untuk membaca file CSV yang sudah dibersihkan dan memasukkannya ke Elasticsearch'''
+    '''This function reads the cleaned CSV file and inserts it into Elasticsearch'''
     ti = kwargs['ti']
     csv_path = ti.xcom_pull(key='cleaned_data_path', task_ids='data_preprocessing_task')
 
     es = Elasticsearch(hosts=["http://elasticsearch:9200"])
     if not es.ping():
-        raise ValueError("Koneksi ke Elasticsearch gagal")
+        raise ValueError("Failed to connect to Elasticsearch")
 
     df = pd.read_csv(csv_path)
 
@@ -97,7 +97,7 @@ def post_to_elasticsearch(**kwargs):
     ]
 
     helpers.bulk(es, actions)
-    print(f"{len(actions)} data berhasil dimasukkan ke Elasticsearch")
+    print(f"{len(actions)} records successfully inserted into Elasticsearch")
 
 with DAG(
     "NBAPlayer_Preference_DAG",

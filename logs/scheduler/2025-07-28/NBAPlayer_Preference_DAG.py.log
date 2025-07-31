@@ -278,3 +278,52 @@
 [2025-07-28T00:20:06.049+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:20:06.049+0000] {dag.py:2429} INFO - Sync 1 DAGs
 [2025-07-28T00:20:06.059+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:20:06.059+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
 [2025-07-28T00:20:06.065+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.433 seconds
+[2025-07-28T00:20:36.335+0000] {processor.py:153} INFO - Started process (PID=1142) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:20:36.336+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:20:36.337+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:20:36.337+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:20:36.735+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:20:36.751+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:20:36.751+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:20:36.762+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:20:36.762+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:20:36.767+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.443 seconds
+[2025-07-28T00:21:07.022+0000] {processor.py:153} INFO - Started process (PID=1148) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:07.023+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:21:07.024+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:07.024+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:07.440+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:07.481+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:07.480+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:21:07.498+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:07.498+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:21:07.506+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.494 seconds
+[2025-07-28T00:21:37.714+0000] {processor.py:153} INFO - Started process (PID=1154) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:37.717+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:21:37.718+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:37.718+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:38.089+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:21:38.103+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:38.102+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:21:38.114+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:21:38.114+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:21:38.119+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.415 seconds
+[2025-07-28T00:22:08.324+0000] {processor.py:153} INFO - Started process (PID=1160) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:08.325+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:22:08.326+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:08.326+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:08.544+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:08.555+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:08.554+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:22:08.564+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:08.564+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:22:08.568+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.253 seconds
+[2025-07-28T00:22:38.744+0000] {processor.py:153} INFO - Started process (PID=1166) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:38.745+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:22:38.746+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:38.746+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:39.003+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:22:39.015+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:39.015+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:22:39.024+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:22:39.024+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:22:39.029+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.290 seconds
+[2025-07-28T00:23:09.211+0000] {processor.py:153} INFO - Started process (PID=1172) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:09.212+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:23:09.213+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:09.213+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:09.429+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:09.441+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:09.440+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:23:09.450+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:09.450+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:23:09.454+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.250 seconds
+[2025-07-28T00:23:39.726+0000] {processor.py:153} INFO - Started process (PID=1178) to work on /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:39.728+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/NBAPlayer_Preference_DAG.py for tasks to queue
+[2025-07-28T00:23:39.729+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:39.729+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:40.215+0000] {processor.py:650} INFO - DAG(s) dict_keys(['NBAPlayer_Preference_DAG']) retrieved from /opt/airflow/dags/NBAPlayer_Preference_DAG.py
+[2025-07-28T00:23:40.235+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:40.235+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-07-28T00:23:40.248+0000] {logging_mixin.py:115} INFO - [2025-07-28T00:23:40.248+0000] {dag.py:2981} INFO - Setting next_dagrun for NBAPlayer_Preference_DAG to 2025-07-26T09:30:00+00:00, run_after=2025-08-02T09:10:00+00:00
+[2025-07-28T00:23:40.254+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/NBAPlayer_Preference_DAG.py took 0.545 seconds
